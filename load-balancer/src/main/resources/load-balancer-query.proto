@@ -1,0 +1,29 @@
+syntax = 'proto3';
+
+option java_package = 'generated';
+
+service LoadBalancerQuery {
+  rpc getAllRecords(query) returns (result);
+  rpc getSomeRecords(query) returns (result);
+}
+
+message query{
+  string startDate = 1;
+  string endDate = 2;
+  string region = 3;
+  string stationId = 4;
+}
+
+message record{
+  string stationId = 1;
+  string temperature = 2;
+  string windSpeed = 3;
+  string windDirection = 4;
+  string relHumidity = 5;
+}
+
+message result{
+ string responseStatus = 1;
+ string responseMessage = 2;
+ repeated record records = 3;
+}
