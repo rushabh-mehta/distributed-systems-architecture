@@ -4,5 +4,5 @@ import generated.LoadBalancerQueryOuterClass;
 import io.grpc.stub.StreamObserver;
 
 public interface TaskType {
-    public abstract void run(LoadBalancerQueryOuterClass.query request, StreamObserver<LoadBalancerQueryOuterClass.result> responseObserver, int serverPort);
+    public abstract void run(LoadBalancerQueryOuterClass.query request, StreamObserver<LoadBalancerQueryOuterClass.result> responseObserver, int serverPort, String ipAddr);
 }

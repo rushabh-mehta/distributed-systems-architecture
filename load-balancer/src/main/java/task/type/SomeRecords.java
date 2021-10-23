@@ -16,7 +16,7 @@ public class SomeRecords implements TaskType{
         this.stationId = stationId;
     }
     @Override
-    public void run(LoadBalancerQueryOuterClass.query request, StreamObserver<LoadBalancerQueryOuterClass.result> responseObserver, int serverPort) {
+    public void run(LoadBalancerQueryOuterClass.query request, StreamObserver<LoadBalancerQueryOuterClass.result> responseObserver, int serverPort, String ipAddr) {
         // TODO add implementation to get some records from file using parser
 
     }

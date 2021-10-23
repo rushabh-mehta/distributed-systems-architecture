@@ -9,6 +9,7 @@ public class Task extends Thread{
     LoadBalancerQueryOuterClass.query request;
     StreamObserver<LoadBalancerQueryOuterClass.result> responseObserver;
     int serverPort;
+    String ipAddr;
 
     public Task(TaskType type, LoadBalancerQueryOuterClass.query request, StreamObserver<LoadBalancerQueryOuterClass.result> responseObserver){
         this.type = type;
@@ -16,11 +17,12 @@ public class Task extends Thread{
         this.responseObserver = responseObserver;
     }
 
-    public void setServerAddress(int serverPort) {
+    public void setServerAddress(int serverPort, String ipAddr) {
         this.serverPort = serverPort;
+        this.ipAddr = ipAddr;
     }
 
     public void run(){
-        type.run(this.request, this.responseObserver, this.serverPort);
+        type.run(this.request, this.responseObserver, this.serverPort, this.ipAddr);
     }
 }

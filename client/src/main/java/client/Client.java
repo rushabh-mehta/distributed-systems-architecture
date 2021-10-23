@@ -16,7 +16,7 @@ public class Client {
     public static void main(String[] args){
         ManagedChannel channel = ManagedChannelBuilder.forAddress(Config.loadBalancerHost,Config.loadBalancerPort).usePlaintext().build();
         LoadBalancerQueryGrpc.LoadBalancerQueryStub asyncQueryStub = LoadBalancerQueryGrpc.newStub(channel);
-        int numRequests = 1000;
+        int numRequests = 100;
         long startTime = System.currentTimeMillis();
         List<CountDownLatch> latches = new ArrayList<>();
         for(int i=0;i<numRequests;i++){

@@ -20,16 +20,19 @@ public class TaskProcessor extends Thread{
     }
     public void run(){
         // TODO add implementation for better server selection algorithm
-        int[] servers = {8082};
+        int[] servers = {8082, 8082};
+        String[] ips = {"192.168.173.158", "192.168.173.100"};
         int count = 0;
-        int currServer = servers[0];
+        int currServer;
+        String currIP;
         while(_forever){
             try {
                 Task task = taskQueue.getQ().poll(2000, TimeUnit.MILLISECONDS);
                 if(task!=null){
                     currServer = servers[count%(servers.length)];
+                    currIP = ips[count%(ips.length)];
                     count++;
-                    task.setServerAddress(currServer);
+                    task.setServerAddress(currServer, currIP);
                     executor.submit(task);
                 }
             } catch (InterruptedException e) {

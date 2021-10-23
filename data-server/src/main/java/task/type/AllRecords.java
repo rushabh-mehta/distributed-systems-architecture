@@ -28,7 +28,7 @@ public class AllRecords implements TaskType{
         DataServerQueryOuterClass.result.Builder result = DataServerQueryOuterClass.result.newBuilder();
         result.setResponseMessage("Message received by server");
         result.setResponseStatus("200");
-        List<MesonetData> dataList = MesonetProcessor.getData("/home/rushabh/Desktop/Courses/CMPE_275/lab_g_01/data/0202/20120202_0300.gz", "/home/rushabh/Desktop/Courses/CMPE_275/lab_g_01/reader/catalog.csv", "/home/rushabh/Desktop/lab_g_01/parsed_data/",null);
+        List<MesonetData> dataList = MesonetProcessor.getData("/home/unmesh-r2/Desktop/275/lab-g01/data/0201/20120201_0100.gz", "/home/unmesh-r2/Desktop/275/lab-g01/reader/catalog.csv", "/home/unmesh-r2/Desktop/275/lab-g01/parsed_data/",null);
         int size = dataList.size()>1000 ? 1000 : dataList.size();
         for(int i=0;i<size;i++){
             MesonetData data = dataList.get(i);
