@@ -39,7 +39,7 @@ public class DataServerQueryService extends DataServerQueryGrpc.DataServerQueryI
 
     @Override
     public void getServerInfo(DataServerQueryOuterClass.dataEmpty request, StreamObserver<DataServerQueryOuterClass.serverInfo> responseObserver) {
-        System.out.println("Sending server information to load balancer");
+        System.out.println("Sending server resource information to load balancer");
         Runtime runtime = Runtime.getRuntime();
         DataServerQueryOuterClass.serverInfo.Builder serverInfo = DataServerQueryOuterClass.serverInfo.newBuilder();
         serverInfo.setCores(runtime.availableProcessors());
