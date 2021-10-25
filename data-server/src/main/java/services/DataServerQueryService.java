@@ -18,13 +18,15 @@ import java.util.concurrent.TimeUnit;
 
 public class DataServerQueryService extends DataServerQueryGrpc.DataServerQueryImplBase {
     TaskQueue queue;
-
+    static int count = 0;
     public DataServerQueryService(TaskQueue queue) {
         this.queue = queue;
     }
 
     @Override
     public void getAllRecords(DataServerQueryOuterClass.query request, StreamObserver<DataServerQueryOuterClass.result> responseObserver) {
+        count++;
+        System.out.println(count);
         TaskType type = new AllRecords(request.getStartDate(), request.getEndDate(), request.getRegion(), request.getStationId());
         Task task = new Task(type, request, responseObserver);
         queue.addTask(task);
@@ -32,6 +34,8 @@ public class DataServerQueryService extends DataServerQueryGrpc.DataServerQueryI
 
     @Override
     public void getSomeRecords(DataServerQueryOuterClass.query request, StreamObserver<DataServerQueryOuterClass.result> responseObserver) {
+        count++;
+        System.out.println(count);
         TaskType type = new SomeRecords(request.getStartDate(), request.getEndDate(), request.getRegion(), request.getStationId());
         Task task = new Task(type, request, responseObserver);
         queue.addTask(task);

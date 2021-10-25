@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class QueryProcessor extends Thread{
      private ExecutorService executor;
     private TaskQueue taskQueue;
-    private int numThreads = 4;
+    private int numThreads = 5;
     private boolean _forever = true;
     public QueryProcessor(){
         executor = Executors.newFixedThreadPool(this.numThreads);

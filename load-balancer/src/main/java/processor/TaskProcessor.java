@@ -37,9 +37,9 @@ public class TaskProcessor extends Thread{
             @Override
             public int compare(DataServer d1, DataServer d2) {
                 DataServerResource r1 = d1.getServerResource();
-                DataServerResource r2 = d1.getServerResource();
-                int metric1 = (int)((r1.getCores()*100)+ r1.getTotalMemory());
-                int metric2 = (int)((r2.getCores()*100)+ r2.getTotalMemory());
+                DataServerResource r2 = d2.getServerResource();
+                int metric1 = (int)((r1.getCores()*100)+ r1.getFreeMemory());
+                int metric2 = (int)((r2.getCores()*100)+ r2.getFreeMemory());
                 return metric1-metric2;
             }
         });
