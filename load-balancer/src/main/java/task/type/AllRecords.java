@@ -24,7 +24,6 @@ public class AllRecords implements TaskType {
     }
     @Override
     public void run(LoadBalancerQueryOuterClass.query request, StreamObserver<LoadBalancerQueryOuterClass.result> responseObserver, int serverPort, String host) {
-        // TODO add implementation to get all records from file using parser
         ManagedChannel channel = ManagedChannelBuilder.forAddress(host,serverPort).usePlaintext().build();
         DataServerQueryGrpc.DataServerQueryStub asyncStub = DataServerQueryGrpc.newStub(channel);
         DataServerQueryOuterClass.query query = DataServerQueryOuterClass.query.newBuilder().setStartDate(request.getStartDate()).build();
