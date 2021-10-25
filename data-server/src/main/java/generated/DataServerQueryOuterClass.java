@@ -3132,6 +3132,1087 @@ public final class DataServerQueryOuterClass {
 
   }
 
+  public interface dataEmptyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:dataEmpty)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 data = 1;</code>
+     */
+    int getData();
+  }
+  /**
+   * Protobuf type {@code dataEmpty}
+   */
+  public  static final class dataEmpty extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:dataEmpty)
+      dataEmptyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use dataEmpty.newBuilder() to construct.
+    private dataEmpty(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private dataEmpty() {
+      data_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private dataEmpty(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              data_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return generated.DataServerQueryOuterClass.internal_static_dataEmpty_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return generated.DataServerQueryOuterClass.internal_static_dataEmpty_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              generated.DataServerQueryOuterClass.dataEmpty.class, generated.DataServerQueryOuterClass.dataEmpty.Builder.class);
+    }
+
+    public static final int DATA_FIELD_NUMBER = 1;
+    private int data_;
+    /**
+     * <code>int32 data = 1;</code>
+     */
+    public int getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (data_ != 0) {
+        output.writeInt32(1, data_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (data_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, data_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof generated.DataServerQueryOuterClass.dataEmpty)) {
+        return super.equals(obj);
+      }
+      generated.DataServerQueryOuterClass.dataEmpty other = (generated.DataServerQueryOuterClass.dataEmpty) obj;
+
+      boolean result = true;
+      result = result && (getData()
+          == other.getData());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static generated.DataServerQueryOuterClass.dataEmpty parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static generated.DataServerQueryOuterClass.dataEmpty parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(generated.DataServerQueryOuterClass.dataEmpty prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code dataEmpty}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:dataEmpty)
+        generated.DataServerQueryOuterClass.dataEmptyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return generated.DataServerQueryOuterClass.internal_static_dataEmpty_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return generated.DataServerQueryOuterClass.internal_static_dataEmpty_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                generated.DataServerQueryOuterClass.dataEmpty.class, generated.DataServerQueryOuterClass.dataEmpty.Builder.class);
+      }
+
+      // Construct using generated.DataServerQueryOuterClass.dataEmpty.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        data_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return generated.DataServerQueryOuterClass.internal_static_dataEmpty_descriptor;
+      }
+
+      @java.lang.Override
+      public generated.DataServerQueryOuterClass.dataEmpty getDefaultInstanceForType() {
+        return generated.DataServerQueryOuterClass.dataEmpty.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public generated.DataServerQueryOuterClass.dataEmpty build() {
+        generated.DataServerQueryOuterClass.dataEmpty result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public generated.DataServerQueryOuterClass.dataEmpty buildPartial() {
+        generated.DataServerQueryOuterClass.dataEmpty result = new generated.DataServerQueryOuterClass.dataEmpty(this);
+        result.data_ = data_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof generated.DataServerQueryOuterClass.dataEmpty) {
+          return mergeFrom((generated.DataServerQueryOuterClass.dataEmpty)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(generated.DataServerQueryOuterClass.dataEmpty other) {
+        if (other == generated.DataServerQueryOuterClass.dataEmpty.getDefaultInstance()) return this;
+        if (other.getData() != 0) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        generated.DataServerQueryOuterClass.dataEmpty parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (generated.DataServerQueryOuterClass.dataEmpty) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int data_ ;
+      /**
+       * <code>int32 data = 1;</code>
+       */
+      public int getData() {
+        return data_;
+      }
+      /**
+       * <code>int32 data = 1;</code>
+       */
+      public Builder setData(int value) {
+        
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 data = 1;</code>
+       */
+      public Builder clearData() {
+        
+        data_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:dataEmpty)
+    }
+
+    // @@protoc_insertion_point(class_scope:dataEmpty)
+    private static final generated.DataServerQueryOuterClass.dataEmpty DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new generated.DataServerQueryOuterClass.dataEmpty();
+    }
+
+    public static generated.DataServerQueryOuterClass.dataEmpty getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<dataEmpty>
+        PARSER = new com.google.protobuf.AbstractParser<dataEmpty>() {
+      @java.lang.Override
+      public dataEmpty parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new dataEmpty(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<dataEmpty> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<dataEmpty> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public generated.DataServerQueryOuterClass.dataEmpty getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface serverInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:serverInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 totalMemory = 1;</code>
+     */
+    long getTotalMemory();
+
+    /**
+     * <code>uint64 freeMemory = 2;</code>
+     */
+    long getFreeMemory();
+
+    /**
+     * <code>uint64 cores = 3;</code>
+     */
+    long getCores();
+  }
+  /**
+   * Protobuf type {@code serverInfo}
+   */
+  public  static final class serverInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:serverInfo)
+      serverInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use serverInfo.newBuilder() to construct.
+    private serverInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private serverInfo() {
+      totalMemory_ = 0L;
+      freeMemory_ = 0L;
+      cores_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private serverInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              totalMemory_ = input.readUInt64();
+              break;
+            }
+            case 16: {
+
+              freeMemory_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+
+              cores_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return generated.DataServerQueryOuterClass.internal_static_serverInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return generated.DataServerQueryOuterClass.internal_static_serverInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              generated.DataServerQueryOuterClass.serverInfo.class, generated.DataServerQueryOuterClass.serverInfo.Builder.class);
+    }
+
+    public static final int TOTALMEMORY_FIELD_NUMBER = 1;
+    private long totalMemory_;
+    /**
+     * <code>uint64 totalMemory = 1;</code>
+     */
+    public long getTotalMemory() {
+      return totalMemory_;
+    }
+
+    public static final int FREEMEMORY_FIELD_NUMBER = 2;
+    private long freeMemory_;
+    /**
+     * <code>uint64 freeMemory = 2;</code>
+     */
+    public long getFreeMemory() {
+      return freeMemory_;
+    }
+
+    public static final int CORES_FIELD_NUMBER = 3;
+    private long cores_;
+    /**
+     * <code>uint64 cores = 3;</code>
+     */
+    public long getCores() {
+      return cores_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (totalMemory_ != 0L) {
+        output.writeUInt64(1, totalMemory_);
+      }
+      if (freeMemory_ != 0L) {
+        output.writeUInt64(2, freeMemory_);
+      }
+      if (cores_ != 0L) {
+        output.writeUInt64(3, cores_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (totalMemory_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, totalMemory_);
+      }
+      if (freeMemory_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, freeMemory_);
+      }
+      if (cores_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, cores_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof generated.DataServerQueryOuterClass.serverInfo)) {
+        return super.equals(obj);
+      }
+      generated.DataServerQueryOuterClass.serverInfo other = (generated.DataServerQueryOuterClass.serverInfo) obj;
+
+      boolean result = true;
+      result = result && (getTotalMemory()
+          == other.getTotalMemory());
+      result = result && (getFreeMemory()
+          == other.getFreeMemory());
+      result = result && (getCores()
+          == other.getCores());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOTALMEMORY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalMemory());
+      hash = (37 * hash) + FREEMEMORY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFreeMemory());
+      hash = (37 * hash) + CORES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCores());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static generated.DataServerQueryOuterClass.serverInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static generated.DataServerQueryOuterClass.serverInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(generated.DataServerQueryOuterClass.serverInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code serverInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:serverInfo)
+        generated.DataServerQueryOuterClass.serverInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return generated.DataServerQueryOuterClass.internal_static_serverInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return generated.DataServerQueryOuterClass.internal_static_serverInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                generated.DataServerQueryOuterClass.serverInfo.class, generated.DataServerQueryOuterClass.serverInfo.Builder.class);
+      }
+
+      // Construct using generated.DataServerQueryOuterClass.serverInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        totalMemory_ = 0L;
+
+        freeMemory_ = 0L;
+
+        cores_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return generated.DataServerQueryOuterClass.internal_static_serverInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public generated.DataServerQueryOuterClass.serverInfo getDefaultInstanceForType() {
+        return generated.DataServerQueryOuterClass.serverInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public generated.DataServerQueryOuterClass.serverInfo build() {
+        generated.DataServerQueryOuterClass.serverInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public generated.DataServerQueryOuterClass.serverInfo buildPartial() {
+        generated.DataServerQueryOuterClass.serverInfo result = new generated.DataServerQueryOuterClass.serverInfo(this);
+        result.totalMemory_ = totalMemory_;
+        result.freeMemory_ = freeMemory_;
+        result.cores_ = cores_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof generated.DataServerQueryOuterClass.serverInfo) {
+          return mergeFrom((generated.DataServerQueryOuterClass.serverInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(generated.DataServerQueryOuterClass.serverInfo other) {
+        if (other == generated.DataServerQueryOuterClass.serverInfo.getDefaultInstance()) return this;
+        if (other.getTotalMemory() != 0L) {
+          setTotalMemory(other.getTotalMemory());
+        }
+        if (other.getFreeMemory() != 0L) {
+          setFreeMemory(other.getFreeMemory());
+        }
+        if (other.getCores() != 0L) {
+          setCores(other.getCores());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        generated.DataServerQueryOuterClass.serverInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (generated.DataServerQueryOuterClass.serverInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long totalMemory_ ;
+      /**
+       * <code>uint64 totalMemory = 1;</code>
+       */
+      public long getTotalMemory() {
+        return totalMemory_;
+      }
+      /**
+       * <code>uint64 totalMemory = 1;</code>
+       */
+      public Builder setTotalMemory(long value) {
+        
+        totalMemory_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 totalMemory = 1;</code>
+       */
+      public Builder clearTotalMemory() {
+        
+        totalMemory_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long freeMemory_ ;
+      /**
+       * <code>uint64 freeMemory = 2;</code>
+       */
+      public long getFreeMemory() {
+        return freeMemory_;
+      }
+      /**
+       * <code>uint64 freeMemory = 2;</code>
+       */
+      public Builder setFreeMemory(long value) {
+        
+        freeMemory_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 freeMemory = 2;</code>
+       */
+      public Builder clearFreeMemory() {
+        
+        freeMemory_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long cores_ ;
+      /**
+       * <code>uint64 cores = 3;</code>
+       */
+      public long getCores() {
+        return cores_;
+      }
+      /**
+       * <code>uint64 cores = 3;</code>
+       */
+      public Builder setCores(long value) {
+        
+        cores_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 cores = 3;</code>
+       */
+      public Builder clearCores() {
+        
+        cores_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:serverInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:serverInfo)
+    private static final generated.DataServerQueryOuterClass.serverInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new generated.DataServerQueryOuterClass.serverInfo();
+    }
+
+    public static generated.DataServerQueryOuterClass.serverInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<serverInfo>
+        PARSER = new com.google.protobuf.AbstractParser<serverInfo>() {
+      @java.lang.Override
+      public serverInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new serverInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<serverInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<serverInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public generated.DataServerQueryOuterClass.serverInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_query_descriptor;
   private static final 
@@ -3147,6 +4228,16 @@ public final class DataServerQueryOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_result_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_dataEmpty_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_dataEmpty_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_serverInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_serverInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3163,10 +4254,13 @@ public final class DataServerQueryOuterClass {
       "indSpeed\030\003 \001(\t\022\025\n\rwindDirection\030\004 \001(\t\022\023\n" +
       "\013relHumidity\030\005 \001(\t\"S\n\006result\022\026\n\016response" +
       "Status\030\001 \001(\t\022\027\n\017responseMessage\030\002 \001(\t\022\030\n" +
-      "\007records\030\003 \003(\0132\007.record2V\n\017DataServerQue" +
-      "ry\022 \n\rgetAllRecords\022\006.query\032\007.result\022!\n\016" +
-      "getSomeRecords\022\006.query\032\007.resultB\013\n\tgener" +
-      "atedb\006proto3"
+      "\007records\030\003 \003(\0132\007.record\"\031\n\tdataEmpty\022\014\n\004" +
+      "data\030\001 \001(\005\"D\n\nserverInfo\022\023\n\013totalMemory\030" +
+      "\001 \001(\004\022\022\n\nfreeMemory\030\002 \001(\004\022\r\n\005cores\030\003 \001(\004" +
+      "2\200\001\n\017DataServerQuery\022 \n\rgetAllRecords\022\006." +
+      "query\032\007.result\022!\n\016getSomeRecords\022\006.query" +
+      "\032\007.result\022(\n\rgetServerInfo\022\n.dataEmpty\032\013" +
+      ".serverInfoB\013\n\tgeneratedb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3198,6 +4292,18 @@ public final class DataServerQueryOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_result_descriptor,
         new java.lang.String[] { "ResponseStatus", "ResponseMessage", "Records", });
+    internal_static_dataEmpty_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_dataEmpty_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_dataEmpty_descriptor,
+        new java.lang.String[] { "Data", });
+    internal_static_serverInfo_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_serverInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_serverInfo_descriptor,
+        new java.lang.String[] { "TotalMemory", "FreeMemory", "Cores", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

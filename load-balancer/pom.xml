@@ -34,13 +34,6 @@
 			<artifactId>grpc-stub</artifactId>
 			<version>1.15.1</version>
 		</dependency>
-		<dependency>
-			<groupId>com.sample</groupId>
-			<artifactId>sample</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>/home/rushabh/Desktop/Courses/CMPE_275/lab_g_1_reader/reader/parser/out/artifacts/parser_jar/gash.MesonetParser.jar</systemPath>
-		</dependency>
 	</dependencies>
 
 	<build>

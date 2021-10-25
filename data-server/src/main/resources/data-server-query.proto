@@ -5,6 +5,7 @@ option java_package = 'generated';
 service DataServerQuery {
   rpc getAllRecords(query) returns (result);
   rpc getSomeRecords(query) returns (result);
+  rpc getServerInfo(dataEmpty) returns (serverInfo);
 }
 
 message query{
@@ -26,4 +27,12 @@ message result{
  string responseStatus = 1;
  string responseMessage = 2;
  repeated record records = 3;
+}
+message dataEmpty{
+  int32 data = 1;
+}
+message serverInfo{
+  uint64 totalMemory = 1;
+  uint64 freeMemory = 2;
+  uint64 cores = 3;
 }

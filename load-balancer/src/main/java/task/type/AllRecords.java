@@ -23,12 +23,13 @@ public class AllRecords implements TaskType {
         this.stationId = stationId;
     }
     @Override
-    public void run(LoadBalancerQueryOuterClass.query request, StreamObserver<LoadBalancerQueryOuterClass.result> responseObserver, int serverPort) {
+    public void run(LoadBalancerQueryOuterClass.query request, StreamObserver<LoadBalancerQueryOuterClass.result> responseObserver, int serverPort, String host) {
         // TODO add implementation to get all records from file using parser
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",serverPort).usePlaintext().build();
+        ManagedChannel channel = ManagedChannelBuilder.forAddress(host,serverPort).usePlaintext().build();
         DataServerQueryGrpc.DataServerQueryStub asyncStub = DataServerQueryGrpc.newStub(channel);
         DataServerQueryOuterClass.query query = DataServerQueryOuterClass.query.newBuilder().setStartDate(request.getStartDate()).build();
         CountDownLatch finishLatch = new CountDownLatch(1);
+        System.out.println(host+" "+serverPort);
         StreamObserver<DataServerQueryOuterClass.result> serverResponseObserver = new StreamObserver<DataServerQueryOuterClass.result>() {
             @Override
             public void onNext(DataServerQueryOuterClass.result value) {

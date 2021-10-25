@@ -14,8 +14,7 @@ public class DataServer {
         TaskQueue taskQueue = new TaskQueue();
         QueryProcessor taskProcessor = new QueryProcessor(taskQueue, 5);
         taskProcessor.start();
-        Server server = ServerBuilder
-                .forPort(DataServerConfig.port)
+        Server server = ServerBuilder.forPort(DataServerConfig.port)
                 .addService(new DataServerQueryService(taskQueue))
                 .build();
         server.start();

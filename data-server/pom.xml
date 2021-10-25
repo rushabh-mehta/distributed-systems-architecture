@@ -39,7 +39,7 @@
 			<artifactId>sample</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>/home/rushabh/Desktop/Courses/CMPE_275/lab_g_1_reader/reader/parser/out/artifacts/parser_jar/gash.MesonetParser.jar</systemPath>
+			<systemPath>/home/rushabh/Desktop/Courses/CMPE_275/lab_g_1_reader/reader/parser/out/artifacts/parser_jar/parser.jar</systemPath>
 		</dependency>
 	</dependencies>
 

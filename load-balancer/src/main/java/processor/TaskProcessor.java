@@ -1,5 +1,6 @@
 package processor;
 
+import loadbalancer.config.ServerConfig;
 import queue.TaskQueue;
 import task.Task;
 
@@ -20,16 +21,19 @@ public class TaskProcessor extends Thread{
     }
     public void run(){
         // TODO add implementation for better server selection algorithm
-        int[] servers = {8082};
+        int[] serverPorts = ServerConfig.serverPorts;
+        String[] hosts = ServerConfig.hosts;
         int count = 0;
-        int currServer = servers[0];
+        int currServerPort;
+        String currHost;
         while(_forever){
             try {
                 Task task = taskQueue.getQ().poll(2000, TimeUnit.MILLISECONDS);
                 if(task!=null){
-                    currServer = servers[count%(servers.length)];
+                    currServerPort = serverPorts[count%(serverPorts.length)];
+                    currHost = hosts[count%(hosts.length)];
                     count++;
-                    task.setServerAddress(currServer);
+                    task.setServerAddress(currServerPort,currHost);
                     executor.submit(task);
                 }
             } catch (InterruptedException e) {

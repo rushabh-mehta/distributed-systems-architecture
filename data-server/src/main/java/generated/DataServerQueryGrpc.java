@@ -91,6 +91,38 @@ public final class DataServerQueryGrpc {
      return getGetSomeRecordsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<generated.DataServerQueryOuterClass.dataEmpty,
+      generated.DataServerQueryOuterClass.serverInfo> getGetServerInfoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getServerInfo",
+      requestType = generated.DataServerQueryOuterClass.dataEmpty.class,
+      responseType = generated.DataServerQueryOuterClass.serverInfo.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<generated.DataServerQueryOuterClass.dataEmpty,
+      generated.DataServerQueryOuterClass.serverInfo> getGetServerInfoMethod() {
+    io.grpc.MethodDescriptor<generated.DataServerQueryOuterClass.dataEmpty, generated.DataServerQueryOuterClass.serverInfo> getGetServerInfoMethod;
+    if ((getGetServerInfoMethod = DataServerQueryGrpc.getGetServerInfoMethod) == null) {
+      synchronized (DataServerQueryGrpc.class) {
+        if ((getGetServerInfoMethod = DataServerQueryGrpc.getGetServerInfoMethod) == null) {
+          DataServerQueryGrpc.getGetServerInfoMethod = getGetServerInfoMethod = 
+              io.grpc.MethodDescriptor.<generated.DataServerQueryOuterClass.dataEmpty, generated.DataServerQueryOuterClass.serverInfo>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "DataServerQuery", "getServerInfo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  generated.DataServerQueryOuterClass.dataEmpty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  generated.DataServerQueryOuterClass.serverInfo.getDefaultInstance()))
+                  .setSchemaDescriptor(new DataServerQueryMethodDescriptorSupplier("getServerInfo"))
+                  .build();
+          }
+        }
+     }
+     return getGetServerInfoMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -132,6 +164,13 @@ public final class DataServerQueryGrpc {
       asyncUnimplementedUnaryCall(getGetSomeRecordsMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getServerInfo(generated.DataServerQueryOuterClass.dataEmpty request,
+        io.grpc.stub.StreamObserver<generated.DataServerQueryOuterClass.serverInfo> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetServerInfoMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -148,6 +187,13 @@ public final class DataServerQueryGrpc {
                 generated.DataServerQueryOuterClass.query,
                 generated.DataServerQueryOuterClass.result>(
                   this, METHODID_GET_SOME_RECORDS)))
+          .addMethod(
+            getGetServerInfoMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                generated.DataServerQueryOuterClass.dataEmpty,
+                generated.DataServerQueryOuterClass.serverInfo>(
+                  this, METHODID_GET_SERVER_INFO)))
           .build();
     }
   }
@@ -185,6 +231,14 @@ public final class DataServerQueryGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetSomeRecordsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getServerInfo(generated.DataServerQueryOuterClass.dataEmpty request,
+        io.grpc.stub.StreamObserver<generated.DataServerQueryOuterClass.serverInfo> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetServerInfoMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -217,6 +271,13 @@ public final class DataServerQueryGrpc {
     public generated.DataServerQueryOuterClass.result getSomeRecords(generated.DataServerQueryOuterClass.query request) {
       return blockingUnaryCall(
           getChannel(), getGetSomeRecordsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public generated.DataServerQueryOuterClass.serverInfo getServerInfo(generated.DataServerQueryOuterClass.dataEmpty request) {
+      return blockingUnaryCall(
+          getChannel(), getGetServerInfoMethod(), getCallOptions(), request);
     }
   }
 
@@ -253,10 +314,19 @@ public final class DataServerQueryGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetSomeRecordsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<generated.DataServerQueryOuterClass.serverInfo> getServerInfo(
+        generated.DataServerQueryOuterClass.dataEmpty request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetServerInfoMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_ALL_RECORDS = 0;
   private static final int METHODID_GET_SOME_RECORDS = 1;
+  private static final int METHODID_GET_SERVER_INFO = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -282,6 +352,10 @@ public final class DataServerQueryGrpc {
         case METHODID_GET_SOME_RECORDS:
           serviceImpl.getSomeRecords((generated.DataServerQueryOuterClass.query) request,
               (io.grpc.stub.StreamObserver<generated.DataServerQueryOuterClass.result>) responseObserver);
+          break;
+        case METHODID_GET_SERVER_INFO:
+          serviceImpl.getServerInfo((generated.DataServerQueryOuterClass.dataEmpty) request,
+              (io.grpc.stub.StreamObserver<generated.DataServerQueryOuterClass.serverInfo>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -346,6 +420,7 @@ public final class DataServerQueryGrpc {
               .setSchemaDescriptor(new DataServerQueryFileDescriptorSupplier())
               .addMethod(getGetAllRecordsMethod())
               .addMethod(getGetSomeRecordsMethod())
+              .addMethod(getGetServerInfoMethod())
               .build();
         }
       }

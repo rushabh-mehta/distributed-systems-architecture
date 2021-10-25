@@ -1,5 +1,8 @@
 generated/DataServerQueryOuterClass$query$1.class
 generated/DataServerQueryOuterClass$record$Builder.class
+generated/DataServerQueryOuterClass$serverInfo$Builder.class
+generated/DataServerQueryOuterClass$dataEmpty$1.class
+generated/DataServerQueryOuterClass$serverInfoOrBuilder.class
 processor/QueryProcessor.class
 generated/DataServerQueryOuterClass.class
 generated/DataServerQueryGrpc$DataServerQueryStub.class
@@ -8,6 +11,7 @@ generated/DataServerQueryGrpc$DataServerQueryImplBase.class
 generated/DataServerQueryGrpc$DataServerQueryFileDescriptorSupplier.class
 generated/DataServerQueryOuterClass$query.class
 generated/DataServerQueryOuterClass$record.class
+generated/DataServerQueryOuterClass$dataEmpty$Builder.class
 generated/DataServerQueryGrpc$DataServerQueryFutureStub.class
 generated/DataServerQueryOuterClass$queryOrBuilder.class
 generated/DataServerQueryOuterClass$query$Builder.class
@@ -26,8 +30,12 @@ task/type/AllRecords.class
 task/type/TaskType.class
 generated/DataServerQueryGrpc$DataServerQueryBlockingStub.class
 generated/DataServerQueryGrpc$DataServerQueryMethodDescriptorSupplier.class
+generated/DataServerQueryOuterClass$serverInfo$1.class
 generated/DataServerQueryGrpc$1.class
+generated/DataServerQueryOuterClass$dataEmptyOrBuilder.class
 generated/DataServerQueryOuterClass$result.class
 server/DataServer.class
 generated/DataServerQueryOuterClass$recordOrBuilder.class
 generated/DataServerQueryGrpc.class
+generated/DataServerQueryOuterClass$dataEmpty.class
+generated/DataServerQueryOuterClass$serverInfo.class

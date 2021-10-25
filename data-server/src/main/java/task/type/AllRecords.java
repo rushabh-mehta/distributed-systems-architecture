@@ -4,10 +4,9 @@ import gash.obs.madis.MesonetData;
 import gash.obs.madis.MesonetProcessor;
 import generated.DataServerQueryOuterClass;
 import io.grpc.stub.StreamObserver;
+import task.config.AllRecordsConfig;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
 
 public class AllRecords implements TaskType{
     String startDate;
@@ -23,12 +22,11 @@ public class AllRecords implements TaskType{
     }
     @Override
     public void run(DataServerQueryOuterClass.query request, StreamObserver<DataServerQueryOuterClass.result> responseObserver) {
-        // TODO add implementation to get all records from file using parser
         System.out.println("Executed request");
         DataServerQueryOuterClass.result.Builder result = DataServerQueryOuterClass.result.newBuilder();
         result.setResponseMessage("Message received by server");
         result.setResponseStatus("200");
-        List<MesonetData> dataList = MesonetProcessor.getData("/home/rushabh/Desktop/Courses/CMPE_275/lab_g_01/data/0202/20120202_0300.gz", "/home/rushabh/Desktop/Courses/CMPE_275/lab_g_01/reader/catalog.csv", "/home/rushabh/Desktop/lab_g_01/parsed_data/",null);
+        List<MesonetData> dataList = MesonetProcessor.getData(AllRecordsConfig.dataSourceStr, AllRecordsConfig.catFStr, AllRecordsConfig.outdirStr,null);
         int size = dataList.size()>1000 ? 1000 : dataList.size();
         for(int i=0;i<size;i++){
             MesonetData data = dataList.get(i);
