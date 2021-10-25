@@ -13,27 +13,29 @@ public class TaskProcessor extends Thread{
     private int numThreads = 4;
     private boolean _forever = true;
     private ExecutorService executor;
+    private static final int[] serverPorts = ServerConfig.serverPorts;
+    private static final String[] hosts = ServerConfig.hosts;
 
     public TaskProcessor(TaskQueue taskQueue){
         this.taskQueue = taskQueue;
         this.numThreads = numThreads;
         executor = Executors.newCachedThreadPool();
     }
+    private static final Server getNextServerAddress(int count){
+        int currServerPort = serverPorts[count%(serverPorts.length)];
+        String currHost = hosts[count%(hosts.length)];
+        return new Server(currServerPort,currHost);
+    }
     public void run(){
         // TODO add implementation for better server selection algorithm
-        int[] serverPorts = ServerConfig.serverPorts;
-        String[] hosts = ServerConfig.hosts;
         int count = 0;
-        int currServerPort;
-        String currHost;
         while(_forever){
             try {
                 Task task = taskQueue.getQ().poll(2000, TimeUnit.MILLISECONDS);
                 if(task!=null){
-                    currServerPort = serverPorts[count%(serverPorts.length)];
-                    currHost = hosts[count%(hosts.length)];
                     count++;
-                    task.setServerAddress(currServerPort,currHost);
+                    Server nextServer = getNextServerAddress(count);
+                    task.setServerAddress(nextServer.getPort(), nextServer.getHost());
                     executor.submit(task);
                 }
             } catch (InterruptedException e) {
@@ -41,5 +43,23 @@ public class TaskProcessor extends Thread{
             }
 
         }
+    }
+}
+
+class Server{
+    private int port;
+    private String host;
+
+    public Server(int port, String host) {
+        this.port = port;
+        this.host = host;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public String getHost() {
+        return host;
     }
 }
