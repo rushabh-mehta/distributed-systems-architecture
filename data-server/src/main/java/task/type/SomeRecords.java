@@ -25,14 +25,11 @@ public class SomeRecords implements TaskType{
     }
     @Override
     public void run(DataServerQueryOuterClass.query request, StreamObserver<DataServerQueryOuterClass.result> responseObserver) {
-       System.out.println("Executed request");
-        System.out.println("test");
         DataServerQueryOuterClass.result.Builder result = DataServerQueryOuterClass.result.newBuilder();
         Set<String> stationIds = new HashSet<>();
         stationIds.add(request.getStationId());
         System.out.println("StationID"+request.getStationId());
         List<MesonetData> dataList = MesonetProcessor.getData(AllRecordsConfig.dataSourceStr, AllRecordsConfig.catFStr, AllRecordsConfig.outdirStr,stationIds);
-        System.out.println("datasize"+dataList.size());
         int size = Math.min(dataList.size(), 1000);
         for(int i=0;i<size;i++){
             MesonetData data = dataList.get(i);
@@ -48,5 +45,6 @@ public class SomeRecords implements TaskType{
         result.setResponseStatus("200");
         responseObserver.onNext(result.build());
         responseObserver.onCompleted();
+        System.out.println("Executed request");
     }
 }
